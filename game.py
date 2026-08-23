@@ -17,6 +17,7 @@ def next_bit():
     m = 2**31
 
     _rng_seed = (a * _rng_seed + c) % m
+    return 1 if _rng_seed % 2 == 0 else -1
 
 class Paddle:
     def __init__(self, column, top_row):
